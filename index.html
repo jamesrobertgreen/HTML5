@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5 Document</title>
+</head>
+
+<body>
+    <header>HTML5 Header</header>
+    <nav>HTML5 Navigation</nav>
+    <article>HTML5 article
+        <hgroup>
+            <h1>Hgroup 1</h1>
+            <h2>Hgroup 2</h2> </hgroup>
+        <aside>HTML5 aside</aside>
+    </article>
+    <section>
+        <details>HTML5 details</details>
+        <figure>
+            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"> Your browser does not support the HTML5 canvas tag.</canvas>
+            <figcaption>HTML5 figcaption</figcaption>
+        </figure>
+    </section>
+    <embed src="HTML5.swf">
+    <br>
+    <p>HTML 5 Audio
+        <audio controls>
+            <source src="HTML5.wav" type="audio/wav"> Your browser does not support the audio element. </audio>
+    </p>
+    <p>HTML input list:
+        <input list="HTML">
+        <datalist id="HTML">
+            <option value="1">
+                <option value="2">
+                    <option value="3">
+                        <option value="4">
+                            <option value="5">
+        </datalist>
+    </p>
+    <mark>HTML5 marked</mark>
+    <p>HTML5 meter
+        <meter>HTML5 meter</meter>
+    </p>
+    <p>HTML5 output =
+        <output id="output"></output>
+    </p>
+    <p>HTML5 progress
+        <progress></progress>
+    </p>
+    <p>HTML5
+        <ruby>Ruby
+            <rp>Ruby Paranthesis</rp>
+            <rt>Ruby Text</rt>
+        </ruby>
+    </p>
+    <p>HTML 5 time:
+        <time id="time"></time>
+    </p>
+    <p>HTML 5 video:
+        <video width="25%" controls src="HTML5.mp4"></video>
+    </p>
+    <p>It would be ok in HTML5 for the text to break<wbr>here<wbr> After the wbr tag</p>
+    <p>HTML5 Command (only works for me in firefox): <command type="command" label="Click me" onclick="clickMe()">Click Me</p>
+    <footer>HTML 5 footer</footer>
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+        var output = 2 + 2;
+        document.getElementById('output').innerHTML = output;
+        document.getElementById('time').innerHTML = Date();
+        
+        var clickMe = function(){
+            alert("HTML 5 Command tag....is pretty useless");
+        };
+    </script>
+</body>
+
+</html>
