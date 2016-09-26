@@ -4,65 +4,182 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML5 Document</title>
-</head>
+    <link rel="stylesheet" type="text/css" href="css/html5.css"> </head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 <body>
-    <header>HTML5 Header</header>
-    <nav>HTML5 Navigation</nav>
-    <article>HTML5 article
-        <hgroup>
-            <h1>Hgroup 1</h1>
-            <h2>Hgroup 2</h2> </hgroup>
-        <aside>HTML5 aside</aside>
-    </article>
-    <section>
-        <details>HTML5 details</details>
-        <figure>
-            <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"> Your browser does not support the HTML5 canvas tag.</canvas>
-            <figcaption>HTML5 figcaption</figcaption>
-        </figure>
-    </section>
-    <embed src="HTML5.swf">
-    <br>
-    <p>HTML 5 Audio
-        <audio controls>
-            <source src="HTML5.wav" type="audio/wav"> Your browser does not support the audio element. </audio>
-    </p>
-    <p>HTML input list:
-        <input list="HTML">
-        <datalist id="HTML">
-            <option value="1">
-                <option value="2">
-                    <option value="3">
-                        <option value="4">
-                            <option value="5">
-        </datalist>
-    </p>
-    <mark>HTML5 marked</mark>
-    <p>HTML5 meter
-        <meter>HTML5 meter</meter>
-    </p>
-    <p>HTML5 output =
-        <output id="output"></output>
-    </p>
-    <p>HTML5 progress
-        <progress></progress>
-    </p>
-    <p>HTML5
-        <ruby>Ruby
-            <rp>Ruby Paranthesis</rp>
-            <rt>Ruby Text</rt>
-        </ruby>
-    </p>
-    <p>HTML 5 time:
-        <time id="time"></time>
-    </p>
-    <p>HTML 5 video:
-        <video width="25%" controls src="HTML5.mp4"></video>
-    </p>
-    <p>It would be ok in HTML5 for the text to break<wbr>here<wbr> After the wbr tag</p>
-    <p>HTML5 Command (only works for me in firefox): <command type="command" label="Click me" onclick="clickMe()">Click Me</p>
-    <footer>HTML 5 footer</footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="jumbotron text-center">HTML 5 Elements</h1>
+                <div class="panel panel-default">
+                    <div class="panel panel-heading">
+                        <h4>Semantic Elements</h3>
+                        <h4 class="text-muted">The following elements have no effect apart from identifying the content to search engines. Bootstrap makes this look pretty</h4 ></div>
+                    <div class="panel panel-body">
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML5 Header</div>
+                            <div class="panel panel-body text-center">
+                                <header>
+                                    <h1>HTML5 Header</h1></header>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML5 Nav</div>
+                            <div class="panel panel-body text-center">
+                                <nav>
+                                    <button class="btn-primary">Nav button 1</button>
+                                    <button class="btn-info">Nav button 2</button>
+                                    <button class="btn-warning">Nav button 3</button>
+                                    <button class="btn-success">Nav button 4</button>
+                                    <button class="btn-danger">Nav button 5</button>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML5 hgroup</div>
+                            <div class="panel panel-body">
+                                <hgroup>
+                                    <h1>Hgroup 1</h1>
+                                    <h2>Hgroup 2</h2> </hgroup>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML5 article and aside</div>
+                            <article class="col-md-6 pull-left">HTML5 article </article>
+                            <aside class="col-md-6 pull-left">HTML5 aside</aside>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML 5 section</div>
+                            <div class="panel panel-body">
+                                <section>Section</section>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML5 details</div>
+                            <div class="panel panel-body">
+                                <details>HTML5 details</details>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML5 output (of javascript 2+2)</div>
+                            <div class="panel panel-body">
+                                <output id="output"></output>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML5 footer</div>
+                            <div class="panel panel-body">
+                                <footer>HTML 5 footer</footer>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel panel-heading"><h4>Other</h4>
+                        <h4 class="text-muted">The elements below do have an effect on the output</h4></div>
+                    <div class="panel panel-body">
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML5 figure and figcaption</div>
+                            <div class="panel panel-body">
+                                <figure>
+                                    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;"> Your browser does not support the HTML5 canvas tag.</canvas>
+                                    <figcaption>HTML5 figcaption</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML5 embed</div>
+                            <div class="panel panel-body">
+                                <embed src="HTML5.swf"> </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML 5 Audio</div>
+                            <div class="panel panel-body">
+                                <audio controls>
+                                    <source src="HTML5.wav" type="audio/wav"> Your browser does not support the audio element. </audio>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML input list</div>
+                            <div class="panel panel-body">
+                                <input list="HTML">
+                                <datalist id="HTML">
+                                    <option value="1">
+                                        <option value="2">
+                                            <option value="3">
+                                                <option value="4">
+                                                    <option value="5">
+                                </datalist>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML5 marked</div>
+                            <div class="panel panel-body">
+                                <mark>Marked</mark>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML5 meter</div>
+                            <div class="panel panel-body">
+                                <meter></meter>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML5 progress</div>
+                            <div class="panel panel-body">
+                                <progress></progress>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML5 Ruby, rp and rt</div>
+                            <div class="panel panel-body">
+                                <ruby>
+                                    <rb>Ruby</rb>
+                                    <rp>(</rp>
+                                    <rt>Ruby Text</rt>
+                                    <rp>)</rp>
+                                </ruby>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML5 time</div>
+                            <div class="panel panel-body">
+                                <time id="time"></time>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML 5 video</div>
+                            <div class="panel panel-body">
+                                <video width="25%" controls src="HTML5.mp4"></video>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML 5 wbr</div>
+                            <div class="panel panel-body">
+                                <p>It would be ok in HTML5 for the text to break
+                                    <wbr>here
+                                    <wbr> After the wbr tag</p>
+                            </div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML 5 command</div>
+                            <div class="panel panel-body"> HTML5 Command (only works for me in firefox):
+                                <command type="command" label="Click me" onclick="clickMe()">Click Me</div>
+                        </div>
+                        <div class="panel panel-primary">
+                            <div class="panel panel-heading">HTML 5 keygen</div>
+                            <div class="panel panel-body">
+                                <p>HTML5 Keygen is to be deprecated</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
@@ -72,8 +189,7 @@
         var output = 2 + 2;
         document.getElementById('output').innerHTML = output;
         document.getElementById('time').innerHTML = Date();
-        
-        var clickMe = function(){
+        var clickMe = function () {
             alert("HTML 5 Command tag....is pretty useless");
         };
     </script>
