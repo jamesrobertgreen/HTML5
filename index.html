@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="css/html5.css"> </head>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <body>
     <div class="container">
@@ -178,9 +180,9 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="panel panel-primary">
-                                    <div class="panel panel-heading">HTML 5 form</div>
+                                    <div class="panel panel-heading">HTML 5 input class = "input-field form-control" types</div>
                                     <div class="panel panel-body">
-                                        <form>
+                                        <form formnovalidate>
                                             <div class="form-group">
                                                 <label>color</label>
                                                 <input class="input-field form-control" type="color" placeholder="color"> </div>
@@ -189,7 +191,7 @@
                                                 <input class="input-field form-control" type="date" placeholder="date"> </div>
                                             <div class="form-group">
                                                 <label>datetime</label>
-                                                <input class="input-field form-control" type="datetime" placeholder="datetime"> </div>
+                                                <input class="input-field form-control" type="datetime" value="1990-12-31T23:59:60Z"> </div>
                                             <div class="form-group">
                                                 <label>datetime-local</label>
                                                 <input class="input-field form-control" type="datetime-local" placeholder="datetime-local"> </div>
@@ -207,7 +209,7 @@
                                                 <input class="input-field form-control" type="range" placeholder="range" min="1" max="10"> </div>
                                             <div class="form-group">
                                                 <label>search</label>
-                                                <input class="input-field form-control" type="search" placeholder="search"> </div>
+                                                <input class="input-field form-control" type="search" results=5 autosave=123 placeholder="search"> </div>
                                             <div class="form-group">
                                                 <label>tel</label>
                                                 <input class="input-field form-control" type="tel" placeholder="tel"> </div>
@@ -226,6 +228,98 @@
                             </div>
                             <div class="col-md-6"></div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="panel panel-primary">
+                                    <div class="panel panel-heading">HTML 5 input attributes</div>
+                                    <div class="panel panel-body">
+                                        <form name="html5InputForm">
+                                            <div class="form-group">
+                                                <label>autocomplete</label>
+                                                <input class="input-field form-control" type="email" autocomplete placeholder="autocomplete email"> </div>
+                                            <div class="form-group">
+                                                <label>autofocus</label>
+                                                <!-- Trigger the modal with a button -->
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Show autofocus modal</button>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="myModal" role="dialog">
+                                                    <div class="modal-dialog">
+                                                        <!-- Modal content-->
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                <h4 class="modal-title">Autofocus Header</h4> </div>
+                                                            <div class="modal-body">
+                                                                <form>
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label>text field 1</label>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="text"> </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label>text field 2(autofocus)</label>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="text" autofocus> </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <label>text field 3</label>
+                                                                            </td>
+                                                                            <td>
+                                                                                <input type="text">
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </form>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-primary" type="submit" formaction="formAction.php">Submit formaction</button>
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="input-field form-control" type="text" disabled value="Input Disabled"> </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-primary" type="submit" formenctype="text/plain" formaction="enctype(html5InputForm.disabled)">Submit formenctype </button>
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-primary" type="submit" formmethod="get">Submit method get </button>
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-primary" type="submit" formmethod="post">Submit method post </button>
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-primary" type="submit" formtarget="_blank" value="Submit to formtarget _blank i.e. a new window">Submit formtarget</button>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Input height 333 Width 121</label>
+                                                <input width="333" width="121" type="image" src="HTML5.png"> </div>
+                                            <div class="form-group">
+                                                <label>Pattern 3 alpha characters</label>
+                                                <input class="input-field form-control" type="text" pattern="[A-Za-z]{3}" title="pattern 3 alpha characters">
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </div>
+                                            <div class="form-group">
+                                                <input required placeholder="required"> </div>
+                                            <div class="form-group">
+                                                <label>Step 3</label>
+                                                <input class="input-field form-control" type="number" step="3"> </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6"> </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -242,6 +336,15 @@
         document.getElementById('time').innerHTML = Date();
         var clickMe = function () {
             alert("HTML 5 Command tag....is pretty useless");
+        };
+        var formAction = function () {
+            alert("formation example");
+        };
+        var enctype = function (value) {
+            alert("enctype example = " + value);
+        };
+        var setAutoFocus = function () {
+            document.getElementById("autofocus").setAttribute("autofocus", "");
         };
     </script>
 </body>
